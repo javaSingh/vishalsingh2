@@ -4,12 +4,15 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+
+
 body {
     overflow-x: hidden;
 }
 
 
 
+.myemail,.myemail:hover{color:white;}
 p.small {
     font-size: 16px;
 }
