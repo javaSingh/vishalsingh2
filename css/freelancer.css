@@ -26,15 +26,7 @@ a.active {
     color: #337AB7;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-}
+
 
 hr.star-light,
 hr.star-primary {
@@ -80,7 +72,7 @@ hr.star-primary:after {
 }
 
 header {
-    text-align: center;
+    
     color: #fff;
     background: #18bc9c;
 }
@@ -91,7 +83,7 @@ header .container {
 }
 
 header img {
-    display: block;
+    display: #337AB7;
     margin: 0 auto 20px;
 }
 
@@ -147,11 +139,7 @@ header .intro-text .skills {
     }
 }
 
-.navbar {
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-   
-}
+
 
 .navbar a:focus {
     outline: 0;
