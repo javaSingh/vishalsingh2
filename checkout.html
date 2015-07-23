@@ -114,8 +114,13 @@
 		 		</div>
 		 	</fieldset>
 		 	
-		 	<p><input type="submit" id="submit-order" value="Submit" class="btn" /></p>
-		 
+		 <p><input type="submit" id="submit-order" value="Submit" class="btn" onclick='clleearstorage()' /></p>
+		 <script>
+		 function clleearstorage()
+		 {
+		 this.storage.clear();
+		 }
+		 </script>
 		 </form>
 	</div>
 	
