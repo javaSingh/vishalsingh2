@@ -1,33 +1,27 @@
-<html>
-	
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-	<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>It Factor</title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/freelancer.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     
-	<!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-	
-	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">	
-	
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-	<title>IT Factor</title>
-  	<script src="bootstrap-carousel.js"></script>
+    
 		<style>
-			.carousel-inner > .item > img,
-			.carousel-inner > .item > a > img 
-			{
-				margin: auto;
-			}
 			.btn
 			{
 				margin-left:5%;
@@ -36,24 +30,19 @@
 			p{
 				text-align: center;
 			}
-			#row1{
-			padding-top:8px;
-			background-color:rgb(53, 225, 53);
-			}
-			#row2{
-			padding-top:8px;
-			background-color:rgb(255, 211, 84);
-			}
-			#row3{
-			padding-top:8px;
-			background-color:#38E4B3;
-			}
   
 		</style>
-	</head>
-	
-	<body>
-		<nav class="navbar navbar-inverse">
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -62,138 +51,175 @@
 			<span class="icon-bar"></span>
 			</button>
 			
-		<a class="navbar-brand" href="index.html">IT Factor</a>
-		</div>
+			<a class="navbar-brand" href="index.html">IT Factor</a>
+			</div>
 		
-		<div class="collapse navbar-collapse" id="myNavbar">
+			<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav">
 			<li class="active"><a href="#">Home</a></li>
-			<li><a href="men.html">Men</a></li>
-			<li><a href="girls.html">Girls</a></li>
-			<li><a href="watches.html">Belts and Watches</a></li>
+			<li><a href="clothings.html">Clothings</a></li>
+			<li><a href="belts.html">Belts</a></li>
+			<li><a href="watches.html">Watches</a></li>
+			<li><a href="ladiespurse.html">Ladies Purse</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-			<li><a href="error.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-			<li><a href="error.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			
+			<li><a href="#contactus"><span class="glyphicon glyphicon-asterisk"></span> Contact Us</a></li>
 			</ul>
-		</div>
+			</div>
 		</div>
 	</nav>
 
-	
-		   <!-- Page Content -->
+<!-- Page Content -->
     <div class="container">
 
         <!-- Page Header -->
         <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Men's Section
-                    <small>Fresh Arrival</small>
+            <div class="col-md-12">
+                <h1 class="page-header">Watch Section<small> Fresh Arrival</small>
                 </h1>
             </div>
         </div>
         <!-- /.row -->
-
+		<div id='site'>
+		<div id='products'>
         <!-- Projects Row -->
         <div class="row">
-            <div class="col-md-4 portfolio-item">
+			<div class="col-md-4">
                 <a href="#">
                     <img class="img-responsive" src="men.jpg" alt="">
                 </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
+				<div class="product-description" data-name="Watch" data-price="400">
+						 <br>
+						 
+						<form class="add-to-cart" action="cart.html" method="post">
+								<div>
+								
+								<input type="text" name="qty-1" id="qty-1" class="qty form-control" value="1" style="width:90%;margin:auto;"></input>
+								</div>
+								 <br>
+							<button type="submit" value="Add to cart" class="btn btn-primary form-control">Add to Cart @ Rs 400</button>
+						</form>
+						<br>
+				</div>
+			</div>
+			 
+			<div class="col-md-4 portfolio-item">
+                
+				<a href="#">
+                    <img class="img-responsive" src="men.jpg" alt="">
+                </a>
+				<div class="product-description" data-name="Watch" data-price="400">
+						 <p>Best Watch Rs. 400</p>
+						
+						<form class="add-to-cart" action="cart.html" method="post">
+								<div>
+								
+								<input type="text" name="qty-1" id="qty-1" class="qty form-control" value="1" style="width:90%;margin:auto;"></input>
+								</div>
+								 <br>
+							<button type="submit" value="Add to cart" class="btn btn-primary form-control">Add to Cart @ Rs 400</button>
+						
+						</form>
+						<br>
+				</div>
+			</div>
+			 
+			<div class="col-md-4 portfolio-item">
                 <a href="#">
                     <img class="img-responsive" src="men.jpg" alt="">
                 </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
+				<div class="product-description" data-name="Watch" data-price="400">
+						 
+						<br>
+						<form class="add-to-cart" action="cart.html" method="post">
+								<div>
+								
+								<input type="text" name="qty-1" id="qty-1" class="qty form-control" value="1" style="width:90%;margin:auto;"></input>
+								</div>
+								 <br>
+							<button type="submit" value="Add to cart" class="btn btn-primary form-control">Add to Cart @ Rs 400</button>
+						
+						</form>
+						<br>
+				</div>
+			</div>
+		</div>
+		 
+		<div class="row">
+			<div class="col-md-4 portfolio-item">
                 <a href="#">
                     <img class="img-responsive" src="men.jpg" alt="">
                 </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-        </div>
+				<div class="product-description" data-name="Watch" data-price="400">
+						 
+						<br>
+						<form class="add-to-cart" action="cart.html" method="post">
+								<div>
+								
+								<input type="text" name="qty-1" id="qty-1" class="qty form-control" value="1" style="width:90%;margin:auto;"></input>
+								</div>
+								 <br>
+							<button type="submit" value="Add to cart" class="btn btn-primary form-control">Add to Cart @ Rs 400</button>
+						
+						</form>
+						<br>
+				</div>
+			</div>
+			 
+			<div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="men.jpg" alt="">
+                </a>
+				<div class="product-description" data-name="Watch" data-price="400">
+						 
+						<br>
+						<form class="add-to-cart" action="cart.html" method="post">
+								<div>
+								
+								<input type="text" name="qty-1" id="qty-1" class="qty form-control" value="1" style="width:90%;margin:auto;"></input>
+								</div>
+								 <br>
+							<button type="submit" value="Add to cart" class="btn btn-primary form-control">Add to Cart @ Rs 400</button>
+						
+						</form>
+						<br>
+				</div>
+			</div>
+			 
+			<div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="men.jpg" alt="">
+                </a>
+				<div class="product-description" data-name="Watch" data-price="400">
+						 
+						<br>
+						<form class="add-to-cart" action="cart.html" method="post">
+								<div>
+								
+								<input type="text" name="qty-1" id="qty-1" class="qty form-control" value="1" style="width:90%;margin:auto;"></input>
+								</div>
+								 <br>
+							<button type="submit" value="Add to cart" class="btn btn-primary form-control">Add to Cart @ Rs 400</button>
+						
+						</form>
+						<br>
+				</div>
+			</div>
+		</div>
+		 
+		
+		 
+		 
         <!-- /.row -->
-
         <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="men.jpg" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="men.jpg" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="men.jpg" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-        </div>
-
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="men.jpg" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="men.jpg" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="men.jpg" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-        </div>
         <!-- /.row -->
 
         <hr>
 
         <!-- Pagination -->
         <div class="row text-center">
-            <div class="col-lg-12">
+            <div class="col-md-12">
                 <ul class="pagination">
                     <li>
                         <a href="#">&laquo;</a>
@@ -222,31 +248,72 @@
         <!-- /.row -->
 
         <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </footer>
-
+		</div>
+        </div>
+	
     </div>
     <!-- /.container -->
-</div>
-<header>
-		<div class="inner">
-		<p class='innerp'>
-			IT Factor
-			<br>
-			contact us- +0919999999999
-			email@email.com
-		</p>
-		</div>
-		
-	</header>
-	</body>
-	
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above" id='contactus'>
+            <div class="container">
+			<div class='row'>
+			<div class="col-md-4 text-center">
+                    <i class="fa fa-phone fa-3x wow bounceIn"></i>
+                    <h3>+917838877540</h3>
+                </div>
+                <div class="col-md-4 text-center">
+                    <a class='myemail' href="mailto:papa@gmail.com"><i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                    <h3>Mail Us</h3></a>
+                </div>
+				<div class="col-md-4  text-center">
+                    <i class="fa fa-map-marker fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                    <h3>New Delhi, India</h3>
+                </div>
+			</div>
+                <div class="row">
+                    <div class="footer-col col-md-8 col-md-offset-2 text-center">
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        Copyright &copy; Your Website 2014
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.shop.js"></script>
+
+
+
+</body>
+
 </html>
