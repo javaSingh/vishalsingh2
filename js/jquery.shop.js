@@ -30,7 +30,7 @@
 			
 			
 			this.currency = "&euro;"; // HTML entity of the currency to be displayed in the layout
-			this.currencyString = ""; // Currency symbol as textual string
+			this.currencyString = "€"; // Currency symbol as textual string
 			this.paypalCurrency = "EUR"; // PayPal's currency code
 			this.paypalBusinessEmail = "yourbusiness@email.com"; // Your Business PayPal's account email address
 			this.paypalURL = "https://www.sandbox.paypal.com/cgi-bin/webscr"; // The URL of the PayPal's form
@@ -211,23 +211,18 @@
 				var checkoutCart = this._toJSONObject( this.storage.getItem( this.cartName ) );
 				var cartItems = checkoutCart.items;
 				var $cartBody = this.$checkoutCart.find( "tbody" );
-				var details="";
+				
 				for( var j = 0; j < cartItems.length; ++j ) {
 					var cartItem = cartItems[j];
 					var cartProduct = cartItem.product;
-					var cartPrice = cartItem.price;
+					var cartPrice = this.currency + " " + cartItem.price;
 					var cartQty = cartItem.qty;
-					var cartHTML = "<tr><td class='pname'>" + cartProduct + "klklklk</td>" + "<td class='pqty'>" + cartQty + "</td>" + "<td class='pprice'>" + cartPrice + "</td></tr>";
+					var cartHTML = "<tr><td class='pname'>" + cartProduct + "</td>" + "<td class='pqty'>" + cartQty + "</td>" + "<td class='pprice'>" + cartPrice + "</td></tr>";
 					
 					$cartBody.html( $cartBody.html() + cartHTML );
-					details=details+","+cartProduct+","+cartQty+","+cartPrice+"";
-					//$('#checkout-order-form').append("<input type='text' name='quantity' value="+cartProduct+" />");
-					//$('#checkout-order-form').append("<input type='text' name='quantity' value="+cartQty+" />");
-					//$('#checkout-order-form').append("<input type='text' name='price' value="+cartPrice+" />");
 				}
 				
 				var cartTotal = this.storage.getItem( this.total );
-				$('#checkout-order-form').append("<input type='hidden' name='details' value="+details+" />");
 				var cartShipping = this.storage.getItem( this.shippingRates );
 				var subTot = this._convertString( cartTotal ) + this._convertString( cartShipping );
 				
