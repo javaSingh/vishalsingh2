@@ -29,11 +29,12 @@
 			this.$paypalForm = this.$element.find( "#paypal-form" ); // PayPal form
 			
 			
-			this.currency = "&euro;"; // HTML entity of the currency to be displayed in the layout
-			this.currencyString = "€"; // Currency symbol as textual string
-			this.paypalCurrency = "EUR"; // PayPal's currency code
+			this.currency = ""; // HTML entity of the currency to be displayed in the layout
+			this.currencyString = ""; // Currency symbol as textual string
+			this.paypalCurrency = ""; // PayPal's currency code
 			this.paypalBusinessEmail = "yourbusiness@email.com"; // Your Business PayPal's account email address
 			this.paypalURL = "https://www.sandbox.paypal.com/cgi-bin/webscr"; // The URL of the PayPal's form
+			
 			
 			// Object containing patterns for form validation
 			this.requiredFields = {
@@ -200,7 +201,7 @@
 					var product = item.product;
 					var price = this.currency + " " + item.price;
 					var qty = item.qty;
-					var html = "<tr><td class='pname'>" + product + "</td>" + "<td class='pqty'><input type='text' value='" + qty + "' class='qty'/></td>" + "<td class='pprice'>" + price + "</td></tr>";
+					var html = "<tr><td class='pname'>" + product + "</td>" + "<td class='pqty'><input type='text' class='qty form-control' value='" + qty + "'/></td>" + "<td class='pprice'>" + price + "</td></tr>";
 					
 					$tableCartBody.html( $tableCartBody.html() + html );
 				}
@@ -211,18 +212,23 @@
 				var checkoutCart = this._toJSONObject( this.storage.getItem( this.cartName ) );
 				var cartItems = checkoutCart.items;
 				var $cartBody = this.$checkoutCart.find( "tbody" );
-				
+				var details="";
 				for( var j = 0; j < cartItems.length; ++j ) {
 					var cartItem = cartItems[j];
 					var cartProduct = cartItem.product;
-					var cartPrice = this.currency + " " + cartItem.price;
+					var cartPrice = cartItem.price;
 					var cartQty = cartItem.qty;
 					var cartHTML = "<tr><td class='pname'>" + cartProduct + "</td>" + "<td class='pqty'>" + cartQty + "</td>" + "<td class='pprice'>" + cartPrice + "</td></tr>";
 					
 					$cartBody.html( $cartBody.html() + cartHTML );
+					details=details+","+cartProduct+","+cartQty+","+cartPrice+"";
+					//$('#checkout-order-form').append("<input type='text' name='quantity' value="+cartProduct+" />");
+					//$('#checkout-order-form').append("<input type='text' name='quantity' value="+cartQty+" />");
+					//$('#checkout-order-form').append("<input type='text' name='price' value="+cartPrice+" />");
 				}
 				
 				var cartTotal = this.storage.getItem( this.total );
+				$('#checkout-order-form').append("<input type='hidden' name='details' value="+details+" />");
 				var cartShipping = this.storage.getItem( this.shippingRates );
 				var subTot = this._convertString( cartTotal ) + this._convertString( cartShipping );
 				
